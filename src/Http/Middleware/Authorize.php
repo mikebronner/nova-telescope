@@ -1,9 +1,7 @@
-<?php
+<?php namespace GeneaLabs\NovaTelescope\Http\Middleware;
 
-namespace Genealabs\NovaTelescope\Http\Middleware;
-
+use GeneaLabs\NovaTelescope\NovaTelescope;
 use Laravel\Nova\Nova;
-use Genealabs\NovaTelescope\NovaTelescope;
 
 class Authorize
 {

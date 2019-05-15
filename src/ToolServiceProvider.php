@@ -1,12 +1,10 @@
-<?php
+<?php namespace GeneaLabs\NovaTelescope;
 
-namespace Genealabs\NovaTelescope;
-
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
+use GeneaLabs\NovaTelescope\Http\Middleware\Authorize;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Genealabs\NovaTelescope\Http\Middleware\Authorize;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 
 class ToolServiceProvider extends ServiceProvider
 {

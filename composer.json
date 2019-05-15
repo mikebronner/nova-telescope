@@ -7,17 +7,19 @@
     ],
     "license": "MIT",
     "require": {
+        "laravel/framework": "5.8.*",
+        "laravel/telescope": "*",        
         "php": ">=7.1.0"
     },
     "autoload": {
         "psr-4": {
-            "Genealabs\\NovaTelescope\\": "src/"
+            "GeneaLabs\\NovaTelescope\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Genealabs\\NovaTelescope\\ToolServiceProvider"
+                "GeneaLabs\\NovaTelescope\\ToolServiceProvider"
             ]
         }
     },
