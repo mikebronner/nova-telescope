@@ -1,7 +1,7 @@
 <template>
     <iframe
         ref="horizon-frame"
-        src="/telescope"
+        :src="telescopePath"
         class="w-full"
         frameborder="0"
         scrolling="auto"
@@ -10,13 +10,37 @@
 
 <script>
 export default {
-    mounted() {
-        //
+    data: function () {
+        return {
+            path: "",
+        };
+    },
+
+    created() {
+        this.getPath();
+    },
+
+    computed: {
+        telescopePath: function () {
+            return ("/" + this.path)
+                .replace("\/\/", "\/");
+        },
+    },
+
+    methods: {
+        getPath: function () {
+            var self = this;
+
+            Nova.request().get("/genealabs/nova-telescope/path")
+                .then(function (response) {
+                    self.path = response.data;
+                });
+        },
     },
 }
 </script>
 
-<style>
+<style lang="scss">
     div.px-view.py-view.mx-auto,
     div.px-view.py-view.mx-auto > div,
     div.px-view.py-view.mx-auto > div > iframe {
