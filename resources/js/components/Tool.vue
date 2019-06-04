@@ -1,13 +1,3 @@
-<template>
-    <iframe
-        ref="horizon-frame"
-        :src="telescopePath"
-        class="w-full"
-        frameborder="0"
-        scrolling="auto"
-    ></iframe>
-</template>
-
 <script>
 export default {
     data: function () {
@@ -40,14 +30,18 @@ export default {
 }
 </script>
 
-<style lang="scss">
-    div.px-view.py-view.mx-auto,
-    div.px-view.py-view.mx-auto > div,
-    div.px-view.py-view.mx-auto > div > iframe {
-        height: 100%;
-    }
+<template>
+    <iframe
+        :src="telescopePath"
+        class="w-full"
+        frameborder="0"
+        scrolling="auto"
+    ></iframe>
+</template>
 
-    div.px-view.py-view.mx-auto {
-        padding-top: 0;
+<style scoped lang="scss">
+    iframe {
+        margin-top: -50px;
+        height: 100vh;
     }
 </style>
