@@ -25,4 +25,14 @@ class NovaTelescope extends Tool
     {
         return view('nova-telescope::navigation');
     }
+
+    /**
+     * Get the Laravel Telescope Path
+     * 
+     * @return string
+     */
+    public function resolveTelescopePath(): string
+    {
+        return config("telescope.path");
+    }
 }

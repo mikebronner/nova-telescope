@@ -14,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/path', function () {
-    return config("telescope.path");
-});
+Route::get('/path', [\GeneaLabs\NovaTelescope\NovaTelescope::class, 'resolveTelescopePath']);
