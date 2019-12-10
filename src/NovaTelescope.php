@@ -1,4 +1,6 @@
-<?php namespace GeneaLabs\NovaTelescope;
+<?php
+
+namespace GeneaLabs\NovaTelescope;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;

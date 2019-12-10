@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use GeneaLabs\NovaTelescope\Http\Controllers\Api\TelescopePathController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/path', function () {
-    return config("telescope.path");
-});
+Route::get('/path', TelescopePathController::class);
