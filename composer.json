@@ -7,7 +7,7 @@
     ],
     "license": "MIT",
     "require": {
-        "laravel/framework": "^6.0",
+        "laravel/framework": "^7.0",
         "laravel/telescope": "^2.1"
     },
     "autoload": {
