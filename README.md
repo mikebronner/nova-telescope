@@ -20,9 +20,8 @@ Add `GeneaLabs\NovaTelescope\NovaTelescope` to the tools section in `App\Provide
 namespace App\Providers;
 
 use GeneaLabs\NovaTelescope\NovaTelescope;
-use Illuminate\Support\Facades\Gate;
-use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
+// ...
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
